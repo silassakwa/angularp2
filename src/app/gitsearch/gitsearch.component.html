@@ -11,15 +11,36 @@
             
               <button type="submit" class="btn btn-success">Search</button>
           </div>
-          <br>
-          <div class="container">
-             <div style="align-items: center;">
-               {{user.name}}
-            </div>
-            
+          </form>
+          <div *ngIf="user">
+             <div class="card card-default">
+               <div class="card card-heading">
+                  <h2 class="card-title">{{user.name}}</h2>
+               </div>
+       <div class="card-body">
+          <div class="row">
+             <div class="col -md-8">
+                 </div>
+                 <div class="col -md-8">
+                    <div class="stats">
+                     
+                    </div>
+                  <img class="gitavatar img thumbnail" src="{{user.avatar_url}}">
+                  <br>
+                  <span class="label label success">{{user.public_repos}}public repos</span>
+                  <span class="label label info">{{user.followers}}followers</span>
+                  <span class="label label warning">{{user.following}}following</span>
           </div>
+          <ul class="list-group">
+             <li class="list-group-item">username{{user.login}}</li>
+             <li class="list-group-item">location{{user.location}}</li>
+             <li class="list-group-item">Email{{user.email}}</li>
+             <li class="list-group-item">Blog{{user.blog}}</li>
+             <li class="list-group-item">Member-since{{user.created_at}}</li>
+          </ul>
 
-
+       </div>
+          
 
 
      
