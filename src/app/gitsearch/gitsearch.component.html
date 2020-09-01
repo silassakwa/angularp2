@@ -1,5 +1,25 @@
-<div *ngIf="user">
-   <h3> {{user.name}}</h3>
-</div>
+<div class="container">
+   <h1>GIT HUB SEARCH PROGRAM</h1>
+   <div class="container-fluid">
+      <h2 class="text-center">SEARCH</h2>
+      <hr>
+      <form>
+          <div class="form-group">
+    
+              <label for="name">Name</label>
+              <input type="text" required class="form-control" id="name">
+            
+              <button type="submit" class="btn btn-success">Search</button>
+          </div>
+          <br>
+          <div class="container">
+             <div style="align-items: center;">
+               {{user.name}}
+            </div>
+            
+          </div>
 
-<p>gitsearch works!</p>
+
+
+
+     
