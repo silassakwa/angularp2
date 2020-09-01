@@ -7,13 +7,24 @@ import {ProjectService} from '../project.service';
 })
 export class GitsearchComponent {
   user:any;
+  Repos:any;
+  username:any;
 
   constructor(private projectService:ProjectService) {
     this.projectService.getUser().subscribe(user=>{
       this.user=user;
-      console.log(this.user);
+    
     })
    }
+   search()
+{
+  this.projectService.updateusername(this.username)
+  this.projectService.getRepos().subscribe(Repos=>{
+    this.Repos=Repos;
+  
+  })
+  
+}
   
   ngOnInit(): void {
   }

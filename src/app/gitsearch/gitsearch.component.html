@@ -1,21 +1,22 @@
 <div class="container">
    <h1>GIT HUB SEARCH PROGRAM</h1>
+   <p> Enter a GitHub username into a form, <span>Press Enter Key</span>, and see names and descriptions of that person's public repositories</p>
    <div class="container-fluid">
-      <h2 class="text-center">SEARCH</h2>
+     
       <hr>
       <form>
           <div class="form-group">
     
               <label for="name">Name</label>
-              <input type="text" required class="form-control" id="name">
-            
-              <button type="submit" class="btn btn-success">Search</button>
+              <input type="text" required class="form-control" id="name"([ngModel])="username"(keyup)="search()">
+             
           </div>
+         
           </form>
           <div *ngIf="user">
              <div class="card card-default">
                <div class="card card-heading">
-                  <h2 class="card-title">{{user.name}}</h2>
+                  <h2 class="card-title">{{user.name}}s repos</h2>
                </div>
        <div class="card-body">
           <div class="row">
