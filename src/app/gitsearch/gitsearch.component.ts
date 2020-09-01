@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GitsearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _g) { }
 
   ngOnInit(): void {
   }
